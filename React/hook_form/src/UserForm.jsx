@@ -13,11 +13,9 @@ const UserForm = (props) => {
     const [password, setPassword] = useState("");
     const [passwordError, setPasswordError] = useState("");
 
-    const [cpassword, setcPassword] = useState("");
+    const [cpassword, setcPassword] = useState("")
+    const [cpasswordError, setcPasswordError] = useState("");
 
-    const createUser = (e) => {
-        const newUser = { firstName, lastName, email, password, cpassword };
-    };
 
     const handleFirstName = (e) => {
         if (e.target.value.length !== 0) {
@@ -79,6 +77,24 @@ const UserForm = (props) => {
         }
     };
 
+    const handlecPassword = (e) => {
+        if (e.target.value.length !== 0) {
+            setcPassword(e.target.value);
+            if (e.target.value !== cpassword) {
+                setcPasswordError("Passwords must match");
+            } else {
+                if (e.target.value.length < 8) {
+                    setcPasswordError("Password must be at least 8 characters.");
+                } else {
+                    setcPasswordError("");
+                }
+            }
+        } else {
+            setcPassword("");
+            setcPasswordError("");
+        }
+    };
+
     return (
         <div>
             <form onSubmit={(e) => e.preventDefault()}>
@@ -104,7 +120,7 @@ const UserForm = (props) => {
                 </div>
                 <div>
                     <label>Confirm Password: </label>
-                    <input type="text" onChange={handlePassword} />
+                    <input type="text" onChange={handlecPassword} />
                 </div>
             </form>
             <p>First Name: {firstName}</p>
