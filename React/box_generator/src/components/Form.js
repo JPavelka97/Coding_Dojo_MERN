@@ -9,12 +9,12 @@ const ColorForm = (props) => {
         e.preventDefault();
         const newBox = { color, width, height }
         props.value
-    //     const ColorBox = styled.div`
-    //     background: ${newBox => newBox.color};
-    //     width: ${newBox => newBox.width || '120px'};
-    //     height: ${newBox => newBox.height || '120px'};
-    // `
-    // }
+        const ColorBox = styled.div`
+        background: ${newBox => newBox.color};
+        width: ${newBox => newBox.width || '120px'};
+        height: ${newBox => newBox.height || '120px'};
+    `
+    }
 
 
 
