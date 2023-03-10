@@ -8,9 +8,9 @@ import ColorBox from "./components/ColorBox";
 function App() {
     const [allboxes, setallboxes] = useState([])
     const newBox = (datacolor,datawidth) => {
-    console.log(datacolor,datawidth)
-    setallboxes([...allboxes,{color:datacolor,width:datawidth}])
-    };
+        console.log(datacolor,datawidth)
+        setallboxes([...allboxes,{color:datacolor,width:datawidth}])
+        };
     return (
         <div className="App">
             <h1>Think Outside the Box</h1>

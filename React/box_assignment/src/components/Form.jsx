@@ -33,10 +33,6 @@ const Form = (props) => {
                         id="width"
                     />
                 </div>
-                <div>
-                    <label>Height: </label>
-                    <input type="text" />
-                </div>
                 <button>Create Box</button>
             </form>
         </div>
