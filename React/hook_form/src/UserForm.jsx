@@ -80,18 +80,18 @@ const UserForm = (props) => {
     const handlecPassword = (e) => {
         if (e.target.value.length !== 0) {
             setcPassword(e.target.value);
-            if (e.target.value !== cpassword) {
-                setcPasswordError("Passwords must match");
+            if (e.target.value !== password) {
+                setPasswordError("Passwords must match");
             } else {
                 if (e.target.value.length < 8) {
-                    setcPasswordError("Password must be at least 8 characters.");
+                    setPasswordError("Password must be at least 8 characters.");
                 } else {
-                    setcPasswordError("");
+                    setPasswordError("");
                 }
             }
         } else {
             setcPassword("");
-            setcPasswordError("");
+            setPasswordError("");
         }
     };
 
