@@ -13,7 +13,6 @@ const Form = (props) => {
     };
 
     return (
-        <div>
             <form onSubmit={handleColor}>
                 <div>
                     <label>Color: </label>
@@ -35,7 +34,6 @@ const Form = (props) => {
                 </div>
                 <button>Create Box</button>
             </form>
-        </div>
     );
 };
 
