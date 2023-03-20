@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-// const dbName = process.env.DB;
-// const username = process.env.USERNAME;
-// const pw = process.env.PASSWORD;
-// const dbUri = process.env.DB_CONNECTION_STRING;
-const uri = `mongodb+srv://jacobpavelka13:ducky@jpcluster.cyxvfiv.mongodb.net/products?retryWrites=true&w=majority`
-// const uri = `mongodb+srv://${username}:${pw}@${dbUri}/${dbName}?retryWrites=true&w=majority`
+const dbName = process.env.DB;
+const user = process.env.USER;
+const pw = process.env.PASSWORD;
+const dbUri = process.env.DB_CONNECTION_STRING;
+const uri = `mongodb+srv://${user}:${pw}@${dbUri}/${dbName}?retryWrites=true&w=majority`
+console.log(uri)
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true

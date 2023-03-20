@@ -15,19 +15,19 @@ const ProductForm = () => {
     }
 
     return (
-        <form onSubmit={onSubmitHandler}>
-            <p>
-                <label>Title</label><br/>
-                <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} />
-            </p>
-            <p>
-                <label>Price</label><br/>
-                <input type="text" onChange={(e) => setPrice(e.target.value)} value={price} />
-            </p>
-            <p>
-                <label>Description</label><br/>
-                <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} />
-            </p>
+        <form onSubmit={onSubmitHandler} class="w-25 mx-auto mt-3">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingTitle" placeholder="Bananas" onChange={(e) => setTitle(e.target.value)} value={title} />
+                <label for="floatingTitle">Title</label><br/>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPrice" placeholder="5.32" onChange={(e) => setPrice(e.target.value)} value={price} />
+                <label for="floatingPrice">Price</label><br/>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingDescription" placeholder="5.32" onChange={(e) => setDescription(e.target.value)} value={description} />
+                <label for="floatingDescription">Price</label><br/>
+            </div>
             <input type="submit" />
         </form>
     )

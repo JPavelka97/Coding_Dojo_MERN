@@ -17,7 +17,9 @@ const DashboardPage = () => {
         <div>
             <ProductForm />
             <hr/>
+            <div>
             {productsList && <ProductList productsList={productsList}/>}
+            </div>
         </div>
     )
 }
