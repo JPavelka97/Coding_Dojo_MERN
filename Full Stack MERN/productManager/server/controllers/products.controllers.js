@@ -37,9 +37,33 @@ module.exports.updateOne = (request, response) => {
         request.body, { new: true, runValidators: true }
     )
     .then(updatedProduct => {
-        res.json({ product: updatedProduct })
+        response.json({ product: updatedProduct })
     })
     .catch((err) => {
-        res.json({ message: 'Something went wrong', error: err})
+        response.json({ message: 'Something went wrong', error: err})
+    })
+}
+
+module.exports.updateOne = (request, response) => {
+    Product.findOneAndUpdate(
+        { _id: request.params.id },
+        request.body, { new: true, runValidators: true }
+    )
+    .then(updatedProduct => {
+        response.json({ product: updatedProduct })
+    })
+    .catch((err) => {
+        response.json({ message: 'Something went wrong', error: err})
+    })
+}
+
+module.exports.deleteOne = (request, response) => {
+    Product.deleteOne(
+        { _id: request.params.id })
+    .then(deleteConfirm => {
+        response.json({ deleteConfirm })
+    })
+    .catch((err) => {
+        response.json({ message: 'Something went wrong', error: err})
     })
 }
