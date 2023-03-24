@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import CreatePage from "./views/CreatePage";
 import Dashboard from "./views/Dashboard";
 import EditPage from "./views/EditPage";

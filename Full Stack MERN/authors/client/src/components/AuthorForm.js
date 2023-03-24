@@ -25,7 +25,6 @@ const AuthorForm = ({ author, formSubmit, formErrors }) => {
                     onChange={(e) => setName(e.target.value)}
                 />
                 <label>Name</label>
-                {console.log(formErrors)}
                 {formErrors.name && (
                     <p className="text-danger">{formErrors.name.message}</p>
                 )}

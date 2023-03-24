@@ -24,7 +24,6 @@ const EditPage = () => {
             .put(`http://localhost:8000/api/authors/${id}/edit`, author)
             .then((response) => {
                 console.log(response);
-
                 nav("/");
             })
             .catch((error) => {
